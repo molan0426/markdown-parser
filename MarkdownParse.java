@@ -20,11 +20,10 @@ public class MarkdownParse {
                     int closeBracket = markdown.indexOf("]", openBracket);
                     int openParen = markdown.indexOf("(", closeBracket);
                     int closeParen = markdown.indexOf(")", openParen);
-                    if(!toReturn.contains(markdown.substring(openParen + 1, closeParen)) && (excalmatory +1 != openBracket)){
+                    if(!toReturn.contains(markdown.substring(openParen + 1, closeParen)) && (excalmatory +1 != openBracket) && (closeBracket +1 ==openParen)){
                         toReturn.add(markdown.substring(openParen + 1, closeParen));
                     }
                     currentIndex = closeParen + 1;
-                System.out.print("openParen " + openParen);
                 i ++;
                 if(i == markdown.length()-1) break;
             }
