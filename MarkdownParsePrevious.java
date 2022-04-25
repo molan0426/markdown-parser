@@ -15,7 +15,7 @@ public class MarkdownParsePrevious {
                     int closeBracket = markdown.indexOf("]", openBracket);
                     int openParen = markdown.indexOf("(", closeBracket);
                     int closeParen = markdown.indexOf(")", openParen);
-                    if(!toReturn.contains(markdown.substring(openParen + 1, closeParen)) && (excalmatory +1 != openBracket)){
+                    if(!toReturn.contains(markdown.substring(openParen + 1, closeParen))){
                         // System.out.println("start: " + (openParen) + "end: " + (closeParen+1) + ". substring is " + markdown.substring(openParen + 1, closeParen));
                         // System.out.println("start: " + markdown.substring(openParen, openParen + 1) + "end: " + markdown.substring(closeParen, closeParen+1) + ". substring is " + markdown.substring(openParen + 1, closeParen));
 
