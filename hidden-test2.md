@@ -1,2 +1,1 @@
-#hidden []
-[happy]
+#hidden [] [happy]
