@@ -18,7 +18,6 @@ public class MarkdownParse {
                 // -1 because sometimes openBracket is 0
                 int excalmatory = markdown.indexOf("!", currentIndex) - 1;
                     int openBracket = markdown.indexOf("[", currentIndex);
-                    System.out.println("openBracket " + openBracket);
                     int closeBracket = markdown.indexOf("]", openBracket);
                     int openParen = markdown.indexOf("(", closeBracket);
                     int closeParen = markdown.indexOf(")", openParen);
