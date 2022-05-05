@@ -18,7 +18,7 @@ public class MarkdownParseTest {
 
     @Test
     public void test_test_file() throws IOException{
-        ArrayList<String> arr = new ArrayList<String>()
+        ArrayList<String> arr = new ArrayList<String>();
         arr.add("https://something.com");
         arr.add("some-thing.html");
 
