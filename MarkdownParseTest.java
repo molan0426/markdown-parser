@@ -30,4 +30,15 @@ public class MarkdownParseTest {
         assertEquals(arr, MarkdownParse.getLinks(content));
     }
 
+    @Test
+    public void test_test_file9() throws IOException{
+        ArrayList<String> arr = new ArrayList<String>();
+        Path filePath = Path.of("./test-file.md");
+
+        String content = Files.readString(filePath);
+
+        assertEquals(arr, MarkdownParse.getLinks(content));
+
+    }
+
 }
