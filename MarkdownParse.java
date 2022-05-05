@@ -15,12 +15,15 @@ public class MarkdownParse {
         int i = 0;
         if(markdown.contains("[") && markdown.contains("(")){
             while (currentIndex < markdown.length()) {
+                
                 int excalmatory = markdown.indexOf("!", currentIndex);
                     int openBracket = markdown.indexOf("[", currentIndex);
+                    System.out.println("openBracket " + openBracket);
                     int closeBracket = markdown.indexOf("]", openBracket);
                     int openParen = markdown.indexOf("(", closeBracket);
                     int closeParen = markdown.indexOf(")", openParen);
-                    if(!toReturn.contains(markdown.substring(openParen + 1, closeParen)) && (excalmatory +1 != openBracket) && (closeBracket +1 ==openParen)){
+                    
+                    if(!toReturn.contains(markdown.substring(openParen + 1, closeParen)) && (excalmatory +1 != openBracket) && (closeBracket +1 ==openParen) ){
                         toReturn.add(markdown.substring(openParen + 1, closeParen));
                     }
 
