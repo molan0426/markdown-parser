@@ -24,8 +24,7 @@ public class MarkdownParse {
                     
                     if(!toReturn.contains(markdown.substring(openParen + 1, closeParen)) && (excalmatory +1 != openBracket) && (closeBracket +1 ==openParen) ){
                         toReturn.add(markdown.substring(openParen + 1, closeParen));
-                    }
-
+		    }
 
                     currentIndex = closeParen + 1;
                 i ++;
