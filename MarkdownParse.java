@@ -30,7 +30,8 @@ public class MarkdownParse {
                 i ++;
                 if(i == markdown.length()-1) break;
             }
-            }
+
+	}
 
         return toReturn;
     }
