@@ -6,3 +6,7 @@ MarkdownParseTest.class: MarkdownParseTest.java MarkdownParse.class
 
 test: MarkdownParseTest.class
 	java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
+
+TryCommonMark.class: TryCommonMark.java
+	javac -g -cp /Users/hiahia/Documents/GitHub/markdown-parser TryCommonMark.java
+
