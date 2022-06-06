@@ -14,28 +14,26 @@ public class MarkdownParse {
         // find the next [, then find the ], then find the (, then read link upto next )
         int currentIndex = 0;
         int i = 0;
-        if(markdown.contains("[") && markdown.contains("(")){
+        if (markdown.contains("[") && markdown.contains("(")) {
             while (currentIndex < markdown.length()) {
                 // -1 because sometimes openBracket is 0
                 int excalmatory = markdown.indexOf("!", currentIndex) - 1;
-                    int openBracket = markdown.indexOf("[", currentIndex);
-                    int closeBracket = markdown.indexOf("]", openBracket);
-                    int openParen = markdown.indexOf("(", closeBracket);
-                    int closeParen = markdown.indexOf(")", openParen);
-                    // String contentBetweenBracket = markdown.substring(openBracket + 1, closeBracket);
-                    if(!toReturn.contains(markdown.substring(openParen + 1, closeParen)) && (excalmatory +1 != openBracket)  ){
-                        // System.out.println("closeBracket " + closeBracket + "; openParen " + openParen + ". website:" + markdown.substring(openParen + 1, closeParen));
-                        toReturn.add(markdown.substring(openParen + 1, closeParen));
-                        //&& (closeBracket +1 ==openParen) 
-                        //(closeBracket +1 ==openParen) && !contentBetweenBracket.contains("\n")
-		    }
+                int openBracket = markdown.indexOf("[", currentIndex);
+                int closeBracket = markdown.indexOf("]", openBracket);
+                int openParen = markdown.indexOf("(", closeBracket);
+                int closeParen = markdown.indexOf(")", openParen);
+                if (!toReturn.contains(markdown.substring(openParen + 1, closeParen))
+                        && (excalmatory + 1 != openBracket)) {
+                    toReturn.add(markdown.substring(openParen + 1, closeParen));
+                }
 
-                    currentIndex = closeParen + 1;
-                i ++;
-                if(i == markdown.length()-1) break;
+                currentIndex = closeParen + 1;
+                i++;
+                if (i == markdown.length() - 1)
+                    break;
             }
 
-	}
+        }
 
         return toReturn;
     }
@@ -47,5 +45,5 @@ public class MarkdownParse {
         System.out.println("");
         System.out.println(links);
     }
-    
+
 }
